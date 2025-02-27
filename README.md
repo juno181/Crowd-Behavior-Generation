@@ -1,7 +1,3 @@
-<div align='center'>
-  <img src="" width=100%>
-</div>
-
 <h2 align="center">Continuous and Locomotive Crowd Behavior Generation</h2>
 <p align="center">
   <a href="https://InhwanBae.github.io/"><strong>Inhwan Bae</strong></a>
