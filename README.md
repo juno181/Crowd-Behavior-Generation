@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://inhwanbae.github.io/publication/crowdes/"><strong><code>Project Page</code></strong></a>
-  <a href="https://arxiv.org/abs/"><strong><code>CVPR Paper</code></strong></a>
+  <a href="https://arxiv.org/abs/2504.04756"><strong><code>CVPR Paper</code></strong></a>
   <a href="https://github.com/InhwanBae/Crowd-Behavior-Generation"><strong><code>Source Code</code></strong></a>
   <a href="#-citation"><strong><code>Related Works</code></strong></a>
 </p>
@@ -41,7 +41,7 @@ If you find this code useful for your research, please cite our trajectory predi
 
 ```bibtex
 @inproceedings{bae2025crowdes,
-  title={Continuous and Locomotive Crowd Behavior Generation},
+  title={Continuous Locomotive Crowd Behavior Generation},
   author={Bae, Inhwan and Lee, Junoh and Jeon, Hae-Gon},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
   year={2025}
