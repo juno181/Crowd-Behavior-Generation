@@ -21,8 +21,26 @@
   <br>An overview of our CrowdES framework.
 </div>
 
+<br>**Summary**: A **crowd emitter diffusion model** and a **state-switching crowd simulator** for **populating** input scene images and **generating** lifelong crowd trajectories.
 
-### Comming Soon!
+<br>
+
+## 🏢🚶‍♂️ Crowd Behavior Generation Benchmark 🏃‍♀️🏠
+* **Repurposed Trajectory Datasets**: A new benchmark that reuses existing real-world human trajectory datasets, adapting them for crowd trajectory generation.
+* **Image-Only Input**: Eliminates conventional observation trajectory dependency and requires only a single input image to fully populate the scene with crowds.
+* **Lifelong Simulation**: Generates continuous trajectories where people dynamically enter and exit the scene, replicating the ever-changing real-world crowd dynamics.
+* **Two-Tier Evaluation**: Assesses performance on both scene-level realism (e.g., density, frequency, coverage, and population metrics) and agent-level accuracy (e.g., kinematics, DTW, diversity, and collision rate).
+
+## 🚵 CrowdES Framework 🚵
+* **Crowd Emitter**: A diffusion-based model that iteratively “emits” new agents by sampling when and where they appear on spatial layouts.
+* **Crowd Simulator**: A state-switching system that generates continuous trajectories with agents dynamically switching behavior modes.
+* **Controllability & Flexibility**: Users can override or customize scene-level and agent-level parameters at runtime.
+* **Sim2Real & Real2Sim Capability**: The framework can bridge synthetic and real-world scenarios for interdisciplinary research.
+
+
+<br>
+
+### Coming Soon!
 
 
 <br>
