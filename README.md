@@ -26,17 +26,38 @@
 <br>
 
 ## 🏢🚶‍♂️ Crowd Behavior Generation Benchmark 🏃‍♀️🏠
+
+<div align='center'>
+  <img src="img/crowdes-task-animated.gif" width=90%>
+</div>
+
+<br>
+
 * **Repurposed Trajectory Datasets**: A new benchmark that reuses existing real-world human trajectory datasets, adapting them for crowd trajectory generation.
 * **Image-Only Input**: Eliminates conventional observation trajectory dependency and requires only a single input image to fully populate the scene with crowds.
 * **Lifelong Simulation**: Generates continuous trajectories where people dynamically enter and exit the scene, replicating the ever-changing real-world crowd dynamics.
 * **Two-Tier Evaluation**: Assesses performance on both scene-level realism (e.g., density, frequency, coverage, and population metrics) and agent-level accuracy (e.g., kinematics, DTW, diversity, and collision rate).
 
+<br>
+
 ## 🚵 CrowdES Framework 🚵
+
+<div align='center'>
+  <img src="img/crowdes-model-animated.gif" width=100%>
+</div>
+<br>
+
 * **Crowd Emitter**: A diffusion-based model that iteratively “emits” new agents by sampling when and where they appear on spatial layouts.
 * **Crowd Simulator**: A state-switching system that generates continuous trajectories with agents dynamically switching behavior modes.
 * **Controllability & Flexibility**: Users can override or customize scene-level and agent-level parameters at runtime.
 * **Sim2Real & Real2Sim Capability**: The framework can bridge synthetic and real-world scenarios for interdisciplinary research.
 
+<div align='center'>
+  <br>
+  <img src="img/crowdes-behaviorchange-animated.gif" width=48%>
+  <img src="img/crowdes-largescene-animated.gif" width=48%>
+  <br>(Left) Time-varying behavior changes, (Right) Real2Sim evaluation on New York City.
+</div>
 
 <br>
 
