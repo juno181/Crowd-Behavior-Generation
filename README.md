@@ -17,8 +17,11 @@
 </p>
 
 <div align='center'>
-  <br><img src="img/crowdes-banner.webp" width=100%>
-  <br>An overview of our CrowdES framework.
+  <br><img src="img/crowdes-banner.webp" width=99%>
+  <br>Generating realistic, continuous crowd behaviors with learned dynamics.
+  <br><br><img src="img/crowdes-behaviorchange-animated.gif" width=49%>
+  <img src="img/crowdes-largescene-animated.gif" width=49%>
+  <br>(Left) Time-varying behavior changes, (Right) Real2Sim evaluation on New York City.
 </div>
 
 <br>**Summary**: A **crowd emitter diffusion model** and a **state-switching crowd simulator** for **populating** input scene images and **generating** lifelong crowd trajectories.
@@ -52,17 +55,9 @@
 * **Controllability & Flexibility**: Users can override or customize scene-level and agent-level parameters at runtime.
 * **Sim2Real & Real2Sim Capability**: The framework can bridge synthetic and real-world scenarios for interdisciplinary research.
 
-<div align='center'>
-  <br>
-  <img src="img/crowdes-behaviorchange-animated.gif" width=48%>
-  <img src="img/crowdes-largescene-animated.gif" width=48%>
-  <br>(Left) Time-varying behavior changes, (Right) Real2Sim evaluation on New York City.
-</div>
-
 <br>
 
 ### Coming Soon!
-
 
 <br>
 
