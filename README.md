@@ -22,6 +22,7 @@
   <br><br><img src="img/crowdes-behaviorchange-animated.gif" width=49%>
   <img src="img/crowdes-largescene-animated.gif" width=49%>
   <br>(Left) Time-varying behavior changes, (Right) Real2Sim evaluation on New York City.
+  <br>More video examples are available on our <a href="https://inhwanbae.github.io/publication/crowdes/">project page</a>!
 </div>
 
 <br>**Summary**: A **crowd emitter diffusion model** and a **state-switching crowd simulator** for **populating** input scene images and **generating** lifelong crowd trajectories.
