@@ -58,7 +58,78 @@
 
 <br>
 
-### Coming Soon!
+## Model Training
+### Setup
+**Environment**
+<br>All models were trained and tested on Ubuntu 20.04 with Python 3.10 and PyTorch 2.2.2 with CUDA 12.1.
+
+**Dataset**
+<br>Preprocessed [ETH](https://data.vision.ee.ethz.ch/cvl/aem/ewap_dataset_full.tgz), [UCY](https://graphics.cs.ucy.ac.cy/research/downloads/crowd-data), [SDD](http://vatic2.stanford.edu/stanford_campus_dataset.zip) and [EDIN](https://homepages.inf.ed.ac.uk/rbf/FORUMTRACKING/) datasets are [released](https://github.com/InhwanBae/Crowd-Behavior-Generation/releases) in this repository.
+
+If you want to preprocess the datasets by yourself, please download the [raw datasets](https://github.com/InhwanBae/Crowd-Behavior-Generation/releases) and run the following command:
+```bash
+python utils/preprocess.py --model_config <path_to_model_config>
+
+# Example
+python utils/preprocess.py --model_config ./configs/model/CrowdES_eth.yaml
+python utils/preprocess.py --model_config ./configs/model/CrowdES_hotel.yaml
+python utils/preprocess.py --model_config ./configs/model/CrowdES_univ.yaml
+python utils/preprocess.py --model_config ./configs/model/CrowdES_zara1.yaml
+python utils/preprocess.py --model_config ./configs/model/CrowdES_zara2.yaml
+python utils/preprocess.py --model_config ./configs/model/CrowdES_sdd.yaml
+python utils/preprocess.py --model_config ./configs/model/CrowdES_gcs.yaml
+python utils/preprocess.py --model_config ./configs/model/CrowdES_edin.yaml
+```
+
+### Train Crowd Emitter Model
+To train the CrowdES crowd emitter model, you can use the following command:
+```bash
+python trainval.py --model_train emitter_pre --model_config <path_to_model_config>
+python trainval.py --model_train emitter --model_config <path_to_model_config>
+
+# Example
+python trainval.py --model_train emitter_pre --model_config ./configs/model/CrowdES_eth.yaml
+python trainval.py --model_train emitter --model_config ./configs/model/CrowdES_eth.yaml
+```
+
+### Train Crowd Simulator Model
+To train the CrowdES crowd simulator model, you can use the following command:
+```bash
+python trainval.py --model_train simulator --model_config <path_to_model_config>
+
+# Example
+python trainval.py --model_train simulator --model_config ./configs/model/CrowdES_eth.yaml
+```
+
+<br>
+
+## Model Evaluation
+### Pretrained Models
+We provide pretrained models in the [**release section**](https://github.com/InhwanBae/Crowd-Behavior-Generation/releases). 
+
+
+### Evaluate CrowdES
+To evaluate the CrowdES model, you can use the following command:
+```bash
+python trainval.py --test --model_config <path_to_model_config>
+
+# Example
+python trainval.py --test --model_config ./configs/model/CrowdES_eth.yaml
+```
+
+### Evaluate CrowdES with Custom Input
+To evaluate the CrowdES model with a custom input image, you can use the following command:
+```bash
+python trainval.py --synthetic --model_config <path_to_model_config>
+
+# Example
+python trainval.py --synthetic --model_config ./configs/model/CrowdES_eth.yaml
+```
+
+<br>
+
+## 3D Visualization
+To visualize the generated crowd behaviors in 3D, we provide a visualization toolkit based on the CARLA simulator. Please follow the instructions in the [3D_Visualization_Toolkit/README](https://github.com/InhwanBae/Crowd-Behavior-Generation/blob/main/3D_Visualization_Toolkit/README.md) file to set up the environment and visualize the results.
 
 <br>
 
