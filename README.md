@@ -61,24 +61,27 @@
 ## Model Training
 ### Setup
 **Environment**
-<br>All models were trained and tested on Ubuntu 20.04 with Python 3.10 and PyTorch 2.2.2 with CUDA 12.1.
+<br>All models were trained and tested on Ubuntu 20.04 with Python 3.10 and PyTorch 2.2.2 with CUDA 12.1. You can install all dependencies via following command:
+```bash
+pip install -r requirements.txt
+```
 
 **Dataset**
 <br>Preprocessed [ETH](https://data.vision.ee.ethz.ch/cvl/aem/ewap_dataset_full.tgz), [UCY](https://graphics.cs.ucy.ac.cy/research/downloads/crowd-data), [SDD](http://vatic2.stanford.edu/stanford_campus_dataset.zip) and [EDIN](https://homepages.inf.ed.ac.uk/rbf/FORUMTRACKING/) datasets are [released](https://github.com/InhwanBae/Crowd-Behavior-Generation/releases) in this repository.
 
 If you want to preprocess the datasets by yourself, please download the [raw datasets](https://github.com/InhwanBae/Crowd-Behavior-Generation/releases) and run the following command:
 ```bash
-python utils/preprocess.py --model_config <path_to_model_config>
+python utils/preprocess_dataset.py --model_config <path_to_model_config>
 
 # Example
-python utils/preprocess.py --model_config ./configs/model/CrowdES_eth.yaml
-python utils/preprocess.py --model_config ./configs/model/CrowdES_hotel.yaml
-python utils/preprocess.py --model_config ./configs/model/CrowdES_univ.yaml
-python utils/preprocess.py --model_config ./configs/model/CrowdES_zara1.yaml
-python utils/preprocess.py --model_config ./configs/model/CrowdES_zara2.yaml
-python utils/preprocess.py --model_config ./configs/model/CrowdES_sdd.yaml
-python utils/preprocess.py --model_config ./configs/model/CrowdES_gcs.yaml
-python utils/preprocess.py --model_config ./configs/model/CrowdES_edin.yaml
+python utils/preprocess_dataset.py --model_config ./configs/model/CrowdES_eth.yaml
+python utils/preprocess_dataset.py --model_config ./configs/model/CrowdES_hotel.yaml
+python utils/preprocess_dataset.py --model_config ./configs/model/CrowdES_univ.yaml
+python utils/preprocess_dataset.py --model_config ./configs/model/CrowdES_zara1.yaml
+python utils/preprocess_dataset.py --model_config ./configs/model/CrowdES_zara2.yaml
+python utils/preprocess_dataset.py --model_config ./configs/model/CrowdES_sdd.yaml
+python utils/preprocess_dataset.py --model_config ./configs/model/CrowdES_gcs.yaml
+python utils/preprocess_dataset.py --model_config ./configs/model/CrowdES_edin.yaml
 ```
 
 ### Train Crowd Emitter Model

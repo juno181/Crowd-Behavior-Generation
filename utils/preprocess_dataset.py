@@ -11,7 +11,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--model_config', type=int, default='./configs/model/CrowdES_gcs.yaml', help='Path to a model config file')
     args = parser.parse_args()
-    config = get_config(args.model_config, args.dataset_config, args.trainer_config)
+    config = get_config(args.model_config)
 
     for phase in ['train', 'test']:
         print(f'Preprocess {config.dataset.dataset_name} {phase} data')
