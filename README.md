@@ -58,7 +58,7 @@
 
 <br>
 
-## Model Training
+## 🔥 Model Training
 ### Setup
 **Environment**
 <br>All models were trained and tested on Ubuntu 20.04 with Python 3.10 and PyTorch 2.2.2 with CUDA 12.1. You can install all dependencies via following command:
@@ -106,7 +106,7 @@ python trainval.py --model_train simulator --model_config ./configs/model/CrowdE
 
 <br>
 
-## Model Evaluation
+## 📊 Model Evaluation
 ### Pretrained Models
 We provide pretrained models in the [**release section**](https://github.com/InhwanBae/Crowd-Behavior-Generation/releases). 
 
@@ -120,7 +120,31 @@ python trainval.py --test --model_config <path_to_model_config>
 python trainval.py --test --model_config ./configs/model/CrowdES_eth.yaml
 ```
 
-### Evaluate CrowdES with Custom Input
+<br>
+
+## 🚀 Model Inference
+### Export Generated Trajectories
+To export the generated trajectories from the CrowdES model, you can use the following command:
+```bash
+python trainval.py --export --model_config <path_to_model_config>
+
+# Example
+python trainval.py --export --model_config ./configs/model/CrowdES_eth.yaml
+```
+
+You can also customize the hyperparameters for exporting the generated trajectories by modifying the `CrowdES/evaluate_export_generated_traj.py` file. Here are the default settings:
+```python
+# CrowdES/evaluate_export_generated_traj.py
+L11 │ # Global settings
+L12 │ TRIALS = 1                      # Number of trials for each scene
+L13 │ SCENARIO_LENGTH = 30 * 60 * 10  # Scenario length in frames (30fps * 60s * 10min), if None, use the length of the scene
+L14 │ POSTFIX = 'crowdes'             # Postfix for the generated scenario files
+L15 │ EXPORT_SPATIAL_LAYOUT = True    # Export predicted spatial layout
+L16 │ EXPORT_SOCIALGAN_DATA = True    # Export to text file for trajectory prediction model training
+L17 │ EXPORT_VIDEO = True             # Export video for visualization
+```
+
+### Run CrowdES with Custom Input
 To evaluate the CrowdES model with a custom input image, you can use the following command:
 ```bash
 python trainval.py --synthetic --model_config <path_to_model_config>
@@ -129,9 +153,20 @@ python trainval.py --synthetic --model_config <path_to_model_config>
 python trainval.py --synthetic --model_config ./configs/model/CrowdES_eth.yaml
 ```
 
+You can also customize the hyperparameters by modifying the `CrowdES/evaluate_synthetic.py` file. Here are the default settings:
+```python
+# CrowdES/evaluate_synthetic.py
+L09 │ # Global settings
+L10 │ TRIALS = 1                      # Number of trials for each scene
+L11 │ SCENE_LIST = ['synth_scurve',]  # List of scenes to use for inference
+L12 │ SCENARIO_LENGTH = 30 * 60 * 10  # Scenario length in frames (30fps * 60s * 10min)
+L13 │ POSTFIX = 'crowdes-synthetic'   # Postfix for generated files
+L14 │ EXPORT_VIDEO = True             # Export video for visualization
+```
+
 <br>
 
-## 3D Visualization
+## 🌏 3D Visualization
 To visualize the generated crowd behaviors in 3D, we provide a visualization toolkit based on the CARLA simulator. Please follow the instructions in the [3D_Visualization_Toolkit/README](https://github.com/InhwanBae/Crowd-Behavior-Generation/blob/main/3D_Visualization_Toolkit/README.md) file to set up the environment and visualize the results.
 
 <br>

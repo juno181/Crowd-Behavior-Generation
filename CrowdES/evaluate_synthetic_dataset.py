@@ -8,6 +8,7 @@ from utils.visualization import produce_video_from_data
 
 # Global settings
 TRIALS = 1                      # Number of trials for each scene
+SCENE_LIST = ['synth_scurve',]  # List of scenes to use for inference
 SCENARIO_LENGTH = 30 * 60 * 10  # Scenario length in frames (30fps * 60s * 10min)
 POSTFIX = 'crowdes-synthetic'   # Postfix for generated files
 EXPORT_VIDEO = True             # Export video for visualization
@@ -18,7 +19,7 @@ def main(config, seed=0):
     reproducibility_settings(seed=seed)
 
     # Load dataset and framework
-    dataset_test = SyntheticDataset(config, ['synth_scurve', ])  # ['synth_scurve', 'synth_maze', 'synth_bottleneck', 'cathedral', 'fernsehturm', 'park', 'manhattan']
+    dataset_test = SyntheticDataset(config, SCENE_LIST)  # ['synth_scurve', 'synth_maze', 'synth_bottleneck', 'cathedral', 'fernsehturm', 'park', 'manhattan']
     framework = CrowdESFramework(config)
 
     # Start inference
