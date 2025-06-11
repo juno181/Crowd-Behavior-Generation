@@ -133,16 +133,7 @@ python trainval.py --export --model_config ./configs/model/CrowdES_eth.yaml
 ```
 
 You can also customize the hyperparameters for exporting the generated trajectories by modifying the `CrowdES/evaluate_export_generated_traj.py` file. Here are the default settings:
-```python
-# CrowdES/evaluate_export_generated_traj.py
-L11 │ # Global settings
-L12 │ TRIALS = 1                      # Number of trials for each scene
-L13 │ SCENARIO_LENGTH = 30 * 60 * 10  # Scenario length in frames (30fps * 60s * 10min), if None, use the length of the scene
-L14 │ POSTFIX = 'crowdes'             # Postfix for the generated scenario files
-L15 │ EXPORT_SPATIAL_LAYOUT = True    # Export predicted spatial layout
-L16 │ EXPORT_SOCIALGAN_DATA = True    # Export to text file for trajectory prediction model training
-L17 │ EXPORT_VIDEO = True             # Export video for visualization
-```
+https://github.com/InhwanBae/Crowd-Behavior-Generation/blob/97a7bc74748aeaaef8b25594005201a82c800559/CrowdES/evaluate_export_generated_traj.py#L11-L17
 
 ### Run CrowdES with Custom Input
 To evaluate the CrowdES model with a custom input image, you can use the following command:
@@ -154,15 +145,7 @@ python trainval.py --synthetic --model_config ./configs/model/CrowdES_eth.yaml
 ```
 
 You can also customize the hyperparameters by modifying the `CrowdES/evaluate_synthetic.py` file. Here are the default settings:
-```python
-# CrowdES/evaluate_synthetic.py
-L09 │ # Global settings
-L10 │ TRIALS = 1                      # Number of trials for each scene
-L11 │ SCENE_LIST = ['synth_scurve',]  # List of scenes to use for inference
-L12 │ SCENARIO_LENGTH = 30 * 60 * 10  # Scenario length in frames (30fps * 60s * 10min)
-L13 │ POSTFIX = 'crowdes-synthetic'   # Postfix for generated files
-L14 │ EXPORT_VIDEO = True             # Export video for visualization
-```
+https://github.com/InhwanBae/Crowd-Behavior-Generation/blob/97a7bc74748aeaaef8b25594005201a82c800559/CrowdES/evaluate_synthetic_dataset.py#L9-L14
 
 <br>
 
